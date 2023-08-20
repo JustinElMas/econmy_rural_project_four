@@ -19,6 +19,57 @@
 
     <h2 class="m-3">Detalles del producto</h2>
 
+    <main class="container">
+
+        <div class="card" style="width: 18rem;">
+            
+            <img src="https://agraria.pe/imgs/a/lx/cajamarca-lima-y-arequipa-producen-la-mitad-de-la-leche-en-n-30912.jpg" class="card-img-top" alt="imagen-de-muestra-del-producto">
+
+            <div class="card-body">
+
+                <p class="card-text">Leche para ti con mucho amor hecha en el suroeste de Perú, solo anota tu ruta y te digo si paso por ahí.</p>
+                <button type="submit" class="btn btn-danger">Solicitar</button>
+            
+            </div>
+
+        </div>
+
+        <!-- place holder for card -->
+
+<!--         <div class="card" aria-hidden="true">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title placeholder-glow">
+                <span class="placeholder col-6"></span>
+              </h5>
+              <p class="card-text placeholder-glow">
+                <span class="placeholder col-7"></span>
+                <span class="placeholder col-4"></span>
+                <span class="placeholder col-4"></span>
+                <span class="placeholder col-6"></span>
+                <span class="placeholder col-8"></span>
+              </p>
+              <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
+            </div>
+          </div> -->
+
+          <!-- formulario para pregunta -->
+
+          <form class="row g-3 my-3 bg-warning rounded fw-bolder text-white">
+            <div class="col-auto">
+              <label for="staticEmail2" class="visually-hidden">Email</label>
+              <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Escribe tu pregunta">
+            </div>
+            <div class="col-auto">
+              <label for="inputPassword2" class="visually-hidden">Pregunta</label>
+              <input type="password" class="form-control" id="inputPassword2" placeholder="Escribe aquí tu pregunta">
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-success mb-3">Preguntar</button>
+            </div>
+          </form>
+
+    </main>
     
 </body>
 </html>
