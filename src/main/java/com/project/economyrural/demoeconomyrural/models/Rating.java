@@ -19,7 +19,7 @@ public class Rating extends ModeloBase {
 
     private int estrellas;
     
-    //relación de uno a uno
+    //relación de uno a uno con la tabla usuario
     @OneToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="usuario_id")
     private Usuario usuario;

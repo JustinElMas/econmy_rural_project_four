@@ -4,6 +4,8 @@ import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.DecimalMax;
@@ -48,6 +50,19 @@ public class Producto extends ModeloBase {
     //debajo de este comentatio va la relación de uno a muchos con la tabla de ratings 
     @OneToMany(mappedBy="producto", fetch = FetchType.LAZY)
     private List<Rating> ratings;
+
+    //debajo de este comentatio va la relación de uno a muchos con la tabla de preguntas 
+    @OneToMany(mappedBy="pregunta", fetch = FetchType.LAZY)
+    private List<Pregunta> preguntas;
     
+    //debajo de este comentario va la relación de muchos a uno con la tabla categorias 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="categoria_id")
+    private Categoria categoria;
+
+    //debajo de este comentario va la relación de muchos a uno con la tabla unidades 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="unidad_id")
+    private Unidad unidad;
 
 }
