@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link type="image/png" sizes="32x32" rel="icon" href="/img/icon-leaf.png">
     <title>Detalles del producto</title>
   </head>
 <body>

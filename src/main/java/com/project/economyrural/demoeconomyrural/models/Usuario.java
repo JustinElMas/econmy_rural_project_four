@@ -3,6 +3,7 @@ package com.project.economyrural.demoeconomyrural.models;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
@@ -57,9 +58,16 @@ public class Usuario extends ModeloBase {
         VENDEDOR
     }
     
+    @Size(min = 9, max = 15)
     private String numeroDeCelular;
 
-    //relación de uno a uno
+    //relación de uno a uno con la tabla de rating
     @OneToOne(mappedBy="usuario", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
     private Rating rating;
+
+    //relacion de uno a uno con la tabla de respuestas
+    @OneToOne(mappedBy="usuario", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+    private Respuesta respuesta;
+
+
 }

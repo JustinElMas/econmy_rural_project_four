@@ -28,12 +28,12 @@ public class Producto extends ModeloBase {
     
     @NotNull(message = "Debes añadir un titulo a este producto")
     @Size(min = 4, max = 100, message = "Este campo permite una logintud de 4 a 100 caracteres")
-    @Pattern(regexp = "^[a-zA-Z\\s]+$", message = "El campo de red de TV solo debe contener caracteres alfabéticos")
+    @Pattern(regexp = "^[a-zA-Z\\s]+$", message = "El campo de titulo solo debe contener caracteres alfabéticos")
     private String titulo;
 
-    @NotBlank(message = "La descripción del canal no debe ir en blanco")
+    @NotBlank(message = "La descripción del producto no debe ir en blanco")
     @Size(max = 5000, message = "Las descripciones no pueden tener más de 5000 caracteres")
-    @Pattern(regexp = "^[a-zA-Z\\s]+$", message = "El campo de red de TV solo debe contener caracteres alfabéticos")
+    @Pattern(regexp = "^[a-zA-Z\\s]+$", message = "El campo descripción solo debe contener caracteres alfabéticos")
     private String descripcion;    
 
     //¿y la imagen, si va en esta tabla para guardar en la base de datos?
@@ -52,7 +52,7 @@ public class Producto extends ModeloBase {
     private List<Rating> ratings;
 
     //debajo de este comentatio va la relación de uno a muchos con la tabla de preguntas 
-    @OneToMany(mappedBy="pregunta", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy="producto", fetch = FetchType.LAZY)
     private List<Pregunta> preguntas;
     
     //debajo de este comentario va la relación de muchos a uno con la tabla categorias 
