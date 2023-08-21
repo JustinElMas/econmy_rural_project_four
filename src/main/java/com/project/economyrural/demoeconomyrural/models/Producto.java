@@ -1,6 +1,10 @@
 package com.project.economyrural.demoeconomyrural.models;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.DecimalMax;
 import jakarta.validation.constraints.DecimalMin;
@@ -40,6 +44,10 @@ public class Producto extends ModeloBase {
     @DecimalMin(value = "3", inclusive = true, message = "El precio mínimo es 3")
     @DecimalMax(value = "1000000", inclusive = true, message = "El precio máximo es 1000000")
     private float precio;
+
     //debajo de este comentatio va la relación de uno a muchos con la tabla de ratings 
+    @OneToMany(mappedBy="producto", fetch = FetchType.LAZY)
+    private List<Rating> ratings;
+    
 
 }
