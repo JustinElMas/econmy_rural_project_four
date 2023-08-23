@@ -6,6 +6,7 @@
     <div class="container-fluid">
 
         <a class="navbar-brand" href="/">
+            <!-- <img src="img/logo.png" alt="logo-de-la-app"> -->
             <span class="bi bi-compass shadow rounded mx-4" style="font-size: 4rem;"></span>
         </a>
 
