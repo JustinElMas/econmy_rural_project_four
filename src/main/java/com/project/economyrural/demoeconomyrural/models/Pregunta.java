@@ -22,8 +22,8 @@ import lombok.Setter;
 public class Pregunta extends ModeloBase{
     
     @NotBlank(message = "El contenido del producto no debe ir en blanco")
-    @Size(max = 5000, message = "El contenido no pueden tener más de 5000 caracteres")
-    @Pattern(regexp = "^[a-zA-Z\\s]+$", message = "El campo contenido solo debe contener caracteres alfabéticos")
+    @Size(min = 10, max = 5000, message = "El contenido debe ser más de 10 caracteres y no pueden tener más de 5000 caracteres")
+    @Pattern(regexp = "^(?=.*[\\p{L}\\p{M}\\s¿?])[\\p{L}\\p{M}\\s¿?]*[¿?]$", message = "El campo contenido debe ser una pregunta")
     private String contenido; 
 
     //debajo de este comentario va la relación de muchos a uno con la tabla categorias 

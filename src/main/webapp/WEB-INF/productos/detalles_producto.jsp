@@ -17,7 +17,7 @@
   </head>
 <body>
   
-  <%@ include file="navbar.jsp" %>
+  <%@ include file="../navbar.jsp" %>
   
   <h2 class="m-3">Detalles del producto</h2>
   
@@ -48,6 +48,13 @@
                     </div>
                   </div>
                 </div>
+
+                <!--  notifiación  -->
+                <p>5 estrellas</p>
+
+                <p>$20.000 peso</p>
+
+                <p>10 kg</p>
 
             </div>
             
@@ -133,40 +140,9 @@
 
         </div>
         
-        <main class="container">
+        <!-- section questions -->
 
-          <form class="row g-3 my-3 bg-warning rounded fw-bolder text-white w-50">
-            <div class="col-auto">
-              <label for="staticEmail2" class="visually-hidden">Email</label>
-              <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="Escribe tu pregunta">
-            </div>
-            <div class="col-auto">
-              <label for="inputPassword2" class="visually-hidden">Pregunta</label>
-              <input type="password" class="form-control" id="inputPassword2" placeholder="Escribe aquí tu pregunta">
-            </div>
-            <div class="col-auto">
-              <button type="submit" class="btn btn-success mb-3">Preguntar</button>
-            </div>
-          </form>
-
-          <div class="container text-center">
-
-            <div class="row">
-
-              <div class="faq-container">
-                <div class="faq-item">
-                  <h3 class="question">¿Cuál es el primer paso?</h3>
-                  <p class="answer">El primer paso es...</p>
-                </div>
-                <div class="faq-item">
-                  <h3 class="question">¿Cómo puedo contactar al soporte?</h3>
-                  <p class="answer">Puedes contactarnos en...</p>
-                </div>
-            </div>
- 
-          </div>
-
-        </main>
+        <%@ include file="productoPreguntas.jsp" %>
 
         <!-- carrusel -->
         
@@ -190,7 +166,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="/js/script.js"></script>
 
-    <%@ include file="footer.jsp" %>
+    <%@ include file="../footer.jsp" %>
 
 </body>
 </html>

@@ -42,4 +42,5 @@ public abstract class ModeloBase {
     protected void onUpdate() {
         this.cratedAt = new Date();
     }
+    
 }

@@ -5,23 +5,19 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import com.project.economyrural.demoeconomyrural.models.Pregunta;
 import com.project.economyrural.demoeconomyrural.services.PreguntaServicio;
 
-@Controller
-@RequestMapping("/productos")
-public class ProductoController {
-    
-    @Autowired PreguntaServicio preguntaServicio;
+import jakarta.validation.Valid;
 
-    @GetMapping("")
-    public String detallesDelProducto(Model model, @ModelAttribute("pregunta") Pregunta pregunta) {
-        return mostrarPagina(model);
-    }
+@Controller
+public class PreguntaController {
+
+    @Autowired PreguntaServicio preguntaServicio;
 
     /* metodo para buscar página de detalles del producto */
     private String mostrarPagina(Model model) {
@@ -30,11 +26,22 @@ public class ProductoController {
         return "productos/detalles_producto";
     }
 
-    /* agregar un producto nuevo */
+    @PostMapping("/productos")
+    public String guardar(
+        @Valid @ModelAttribute("pregunta") Pregunta pregunta,
+        BindingResult result, 
+        Model model
+    ) {
 
+        if(result.hasErrors()) {
+            return mostrarPagina(model);
+        }
 
-    /* ver detalles del producto por id */
+        //guardar la pregunta 
+        preguntaServicio.save(pregunta);
 
+        return "redirect:/productos";
+    }
 
-    /* hacer un put al producto al guardarlo con una nueva pregunta */
 }
+
