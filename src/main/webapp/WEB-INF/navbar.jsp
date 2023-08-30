@@ -6,13 +6,12 @@
     <div class="container-fluid">
 
         <a class="navbar-brand" href="/">
-            <!-- <img src="img/logo.png" alt="logo-de-la-app"> -->
-            <span class="bi bi-compass shadow rounded mx-4" style="font-size: 4rem;"></span>
+            <img src="img/logo-agri.png" alt="logo-de-la-app" class="logo-del-proyecto">
         </a>
 
-        <form class="d-flex" role="search">
+        <form class="d-flex" role="search" action="/buscar">
 
-            <input class="form-control me-2" type="search" placeholder="Buscar productos" aria-label="buscar">
+            <input class="form-control me-2" type="search" placeholder="Buscar productos" aria-label="buscar" name="txtBuscar">
             <button class="btn btn-outline-success" type="submit">Buscar</button>
             
         </form>
@@ -30,3 +29,12 @@
     </div>
 
   </nav>
+
+<main class="d-flex justify-content-center">
+    <c:if test="${not empty errorAtFindContentQuestion}">
+    <p class="bg-danger shadow fw-bolder rounded p-3">
+        <c:out value="${errorAtFindContentQuestion}"/>
+    </p>
+    <p class="btn btn-success mx-2 p-3" id="reload">Intenta de nuevo</p>
+</c:if>
+</main>

@@ -5,23 +5,21 @@
     
     <!-- form para la pregunta con modelattribute -->
 
-    <form:form action="" method="post" modelAttribute="pregunta" class="row g-3 my-3 bg-warning rounded fw-bolder text-white w-50">
-
-      <p>
-          <form:label path="contenido">Pregunta: </form:label>
-          <form:input type="text" path="contenido"/>
-          <form:errors path="contenido"/>
-      </p>
-
-      <button class="btn btn-success">Enviar</button>
-
+    <form:form action="" method="post" modelAttribute="pregunta" class="custom-form">
+      <div class="mb-3">
+        <form:label path="contenido" class="form-label custom-label">Pregunta:</form:label>
+        <form:input type="text" path="contenido" class="form-control custom-input"/>
+        <form:errors path="contenido" class="text-danger"/>
+      </div>
+      <button class="btn custom-button">Enviar</button>
     </form:form>
-
+    
     <!-- mostrar la pregunta en la vista -->
     <h2 class="text-center">Tus preguntas:</h2>
 
     
     <c:forEach items="${preguntas}" var="question">
+
       <h1>
         <c:out value="${question.producto.titulo}"/>
       </h1>
@@ -34,10 +32,15 @@
 
             <div class="faq-item">
 
-              <ul class="answer">
+              <ul class="answer bg-primary p-4 rounded text-white h5 shadow">
 
-                <li>
+                <li class="d-flex justify-content-between align-items-center">
                     <c:out value="${question.contenido}"/>
+
+                    <a onclick="deleteItem([['${question.id}']])" class="btn btn-outline-none">
+                        <span class="bi bi-trash h4 m-2 text-danger bg-white p-2 rounded m-2"></span>
+                    </a>
+
                 </li>
 
               </ul>
