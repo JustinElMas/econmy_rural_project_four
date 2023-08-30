@@ -151,7 +151,7 @@
 
                     </div>
 
-                </div>
+                  </div>
 
                 </div>
 
@@ -210,88 +210,18 @@
 
                   </div>
 
-
-                          <section id="planes" class="main-plans-container">
-            <div class="plans--title">
-                <h2>Escoge el plan que mejor se ajuste a ti.</h2>
-                <p>Cualquier plan te da acceso completo a  nuestra plataforma</p>
-            </div>
-
-            <section class="plans-container--slider">
-
-                <article class="plans-container--card">
-                    <p class="recommended">Recomendado</p>
-                    <div class="plan-info-container">
-                        <h3 class="plan-card--title">Pago Anual</h3>
-                        <p class="plan-card--price"><span>$</span>99</p>
-                        <p class="plan-card-saving"> * Suscribete hoy y accede a todo las noticias</p>
-                        <button class="plan-card--ca">Escoger este <span class="icon icon-arrow-right2 "></span> </button>
+                  <!-- sections más productos -->
+                  <section id="planes" class="main-plans-container">
+                    <div class="plans--title">
+                      <h2>Escoge el plan que mejor se ajuste a ti.</h2>
+                      <p>Cualquier plan te da acceso completo a nuestra plataforma</p>
                     </div>
-                </article>
 
-                <article class="plans-container--card">
-                    <p class="recommended">Recomendado</p>
-                    <div class="plan-info-container">
-                        <h3 class="plan-card--title">Pago Anual</h3>
-                        <p class="plan-card--price"><span>$</span>99</p>
-                        <p class="plan-card-saving"> * Suscribete hoy y accede a todo las noticias</p>
-                        <button class="plan-card--ca">Escoger este <span class="icon icon-arrow-right2 "></span> </button>
-                    </div>
-                </article>
+                    <section class="plans-container--slider" id="plans-container">
 
-                <article class="plans-container--card">
-                    <p class="recommended">Recomendado</p>
-                    <div class="plan-info-container">
-                        <h3 class="plan-card--title">Pago Anual</h3>
-                        <p class="plan-card--price"><span>$</span>99</p>
-                        <p class="plan-card-saving"> * Suscribete hoy y accede a todo las noticias</p>
-                        <button class="plan-card--ca">Escoger este <span class="icon icon-arrow-right2 "></span> </button>
-                    </div>
-                </article>
+                    </section>
 
-                <article class="plans-container--card">
-                    <p class="recommended">Recomendado</p>
-                    <div class="plan-info-container">
-                        <h3 class="plan-card--title">Pago Anual</h3>
-                        <p class="plan-card--price"><span>$</span>99</p>
-                        <p class="plan-card-saving"> * Suscribete hoy y accede a todo las noticias</p>
-                        <button class="plan-card--ca">Escoger este <span class="icon icon-arrow-right2 "></span> </button>
-                    </div>
-                </article>
-
-                <article class="plans-container--card">
-                  <p class="recommended">Recomendado</p>
-                  <div class="plan-info-container">
-                      <h3 class="plan-card--title">Pago Anual</h3>
-                      <p class="plan-card--price"><span>$</span>99</p>
-                      <p class="plan-card-saving"> * Suscribete hoy y accede a todo las noticias</p>
-                      <button class="plan-card--ca">Escoger este <span class="icon icon-arrow-right2 "></span> </button>
-                  </div>
-              </article>
-
-              <article class="plans-container--card">
-                <p class="recommended">Recomendado</p>
-                <div class="plan-info-container">
-                    <h3 class="plan-card--title">Pago Anual</h3>
-                    <p class="plan-card--price"><span>$</span>99</p>
-                    <p class="plan-card-saving"> * Suscribete hoy y accede a todo las noticias</p>
-                    <button class="plan-card--ca">Escoger este <span class="icon icon-arrow-right2 "></span> </button>
-                </div>
-            </article>
-
-            <article class="plans-container--card">
-              <p class="recommended">Recomendado</p>
-              <div class="plan-info-container">
-                  <h3 class="plan-card--title">Pago Anual</h3>
-                  <p class="plan-card--price"><span>$</span>99</p>
-                  <p class="plan-card-saving"> * Suscribete hoy y accede a todo las noticias</p>
-                  <button class="plan-card--ca">Escoger este <span class="icon icon-arrow-right2 "></span> </button>
-              </div>
-          </article>
-
-            </section>
-
-        </section>
+                  </section>
 
                   <!-- script js -->
                   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
@@ -304,7 +234,7 @@
                     integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
                   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
                   <script src="/js/script.js"></script>
-
+                  
                   <%@ include file="../footer.jsp" %>
 
           </body>

@@ -2,6 +2,32 @@ const toastTrigger = document.getElementById('liveToastBtn');
 const toastLiveExample = document.getElementById('liveToast');
 const btnReload = document.getElementById('reload');
 
+// generarPlanes.js
+
+const numCards = 10; // Cambia esto al número deseado de tarjetas
+
+const plansContainer = document.querySelector('#plans-container');
+
+for (let i = 0; i < numCards; i++) {
+  const planData = {
+    recommended: i === 0, // La primera tarjeta es recomendada
+    title: `Plan ${i + 1}`,
+    price: 99 + i, // Incrementa el precio para cada tarjeta
+    saving: `* Suscríbete hoy y accede a todas las noticias (${i + 1})`
+  };
+
+  plansContainer.innerHTML += `
+    <article class="plans-container--card">
+      ${planData.recommended ? '<p class="recommended">Recomendado</p>' : ''}
+      <div class="plan-info-container">
+        <h3 class="plan-card--title">${planData.title}</h3>
+        <p class="plan-card--price"><span>$</span>${planData.price}</p>
+        <p class="plan-card-saving">${planData.saving}</p>
+        <button class="plan-card--ca">Escoger este <span class="icon icon-arrow-right2"></span></button>
+      </div>
+    </article>
+  `;
+}
 
 if (toastTrigger) {
   const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
@@ -44,3 +70,4 @@ function deleteItem(id) {
       }
   });
 }
+
