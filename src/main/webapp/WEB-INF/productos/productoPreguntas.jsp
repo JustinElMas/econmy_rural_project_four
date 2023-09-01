@@ -35,11 +35,19 @@
               <ul class="answer bg-primary p-4 rounded text-white h5 shadow">
 
                 <li class="d-flex justify-content-between align-items-center">
+
                     <c:out value="${question.contenido}"/>
 
+                  <div>
                     <a onclick="deleteItem([['${question.id}']])" class="btn btn-outline-none">
-                        <span class="bi bi-trash h4 m-2 text-danger bg-white p-2 rounded m-2"></span>
-                    </a>
+                      <span class="bi bi-trash h4 m-2 text-danger bg-white p-2 rounded m-2"></span>
+                  </a>
+
+                  <a href="/productos/${question.id}/edit" class="btn bg-white text-black"> 
+                    <span class="bi bi-chat-right-dots-fill
+                    fw-bolder"></span>
+                  </a>
+                  </div>
 
                 </li>
 

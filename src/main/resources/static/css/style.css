@@ -285,3 +285,8 @@
 .plans-container--slider::-webkit-scrollbar-track:hover {
   background-color: #ddd; /* Color de la pista en estado de hover */
 }
+
+.font-text {
+  font-size: 30px;
+  width: 100%;
+}

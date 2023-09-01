@@ -6,7 +6,7 @@
     <div class="container-fluid">
 
         <a class="navbar-brand" href="/">
-            <img src="img/logo-agri.png" alt="logo-de-la-app" class="logo-del-proyecto">
+            <img src="/img/logo-agri.png" alt="logo-de-la-app" class="logo-del-proyecto">
         </a>
 
         <form class="d-flex" role="search" action="/buscar">
